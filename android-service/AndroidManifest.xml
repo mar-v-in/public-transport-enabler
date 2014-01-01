@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="de.schildbach.pte">
+    <uses-sdk android:minSdkVersion="9"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application>
+        <service android:name=".android.NetworkProviderService">
+            <intent-filter>
+                <action android:name="de.schildbach.pte.android.NetworkProviderService.LIST_PROVIDERS"/>"
+                <action android:name="de.schildbach.pte.android.NetworkProviderService.GET_PROVIDER"/>"
+            </intent-filter>
+        </service>
+        <activity android:name=".test.TestActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
