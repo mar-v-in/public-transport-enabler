@@ -1,3 +1,9 @@
+public-transport-android-service
+================================
+This is an proof-of-concept Android Service that allows apps to ask a service for public transport routes, nearby stations and everything else provider by public-transport-enabler
+
+Usage
+-----
 Clients will need the following packages(P), classes (C) and AIDL file (A):
 
     A de.schildbach.pte.android.INetworkProvider
@@ -13,7 +19,8 @@ eg. using `NetworkProviderFactory.provider(this, NetworkId.DB);`
 
 The resulting NetworkProvider works as usual, but note that all methods are RPC methods, so even `NetworkProvider.id()` should only be used asynchronous (using `AsyncTask` or a `Thread`)
 
-Sample code:
+Sample code
+-----------
 ```java
 package de.schildbach.pte.test;
 
